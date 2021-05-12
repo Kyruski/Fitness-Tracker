@@ -32,12 +32,14 @@
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
     <WorkoutContainer />
+    <NutritionContainer />
   </p>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
 import WorkoutContainer from "./Workout/WorkoutContainer.vue";
+import NutritionContainer from "./Nutrition/NutritionContainer.vue";
 export default defineComponent({
   name: "HelloWorld",
   props: {
@@ -46,7 +48,7 @@ export default defineComponent({
       required: true,
     },
   },
-  components: { WorkoutContainer },
+  components: { WorkoutContainer, NutritionContainer },
   setup: () => {
     const count = ref(0);
     return { count };

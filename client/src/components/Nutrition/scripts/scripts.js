@@ -1,5 +1,4 @@
-const fs = require('fs');
-const foodsList = require('./foodlist');
+import { foodsList } from './foodlist.js';
 
 const meals = ["Breakfast", "Lunch", "Dinner"];
 const foodItems = makeFoods();
@@ -37,10 +36,10 @@ function makeMeal() {
   for (let i = 0; i < numItems; i++) {
     const itemID = Math.floor(Math.random() * foodsList.length);
     const servings = Math.floor(Math.random() * 4) + 1;
-    meal.push([
-      foodItems[itemID],
+    meal.push({
+      food: foodItems[itemID],
       servings
-    ]);
+    });
   }
   return meal;
 }

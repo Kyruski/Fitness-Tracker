@@ -1,4 +1,4 @@
-module.exports = ["asparagus",
+export const foodsList = ["asparagus",
 "apples",
 "avacado",
 "alfalfa",
