@@ -8,7 +8,7 @@ export interface IFood {
 }
 
 export interface IFoodItem {
-  food: IFood;
+  food: number;
   servings: number;
 }
 

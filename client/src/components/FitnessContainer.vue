@@ -18,7 +18,7 @@ import { ref, defineComponent } from "vue";
 import WorkoutContainer from "./Workout/WorkoutContainer.vue";
 import NutritionContainer from "./Nutrition/NutritionContainer.vue";
 export default defineComponent({
-  name: "HelloWorld",
+  name: "FitnessContainer",
   props: {},
   components: { WorkoutContainer, NutritionContainer },
   setup: () => {

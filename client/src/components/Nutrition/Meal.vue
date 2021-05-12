@@ -18,13 +18,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { MealType } from "./models/index";
 import MealItem from "./MealItem.vue";
+import { IFoodItem } from "./types/types";
 export default defineComponent({
   name: "Meal",
   props: {
     meal: {
-      type: MealType,
+      type: Object as () => IFoodItem,
       required: true,
     },
   },
@@ -41,13 +41,30 @@ export default defineComponent({
         ["Pro", "g"],
       ];
     },
+    totals() {},
   },
   setup() {},
 });
 </script>
 
-<style scoped>
+<style >
 table {
   margin: 0 auto;
+  width: 390px;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 135px;
+  text-align: left;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 75px;
+}
+
+tr > td {
+  width: 60px;
 }
 </style>

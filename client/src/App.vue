@@ -1,15 +1,15 @@
 <template>
-  <HelloWorld />
+  <FitnessContainer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/FitnessContainer.vue";
+import FitnessContainer from "./components/FitnessContainer.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    FitnessContainer,
   },
 });
 </script>

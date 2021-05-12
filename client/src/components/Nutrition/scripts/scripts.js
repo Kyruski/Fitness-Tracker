@@ -1,7 +1,6 @@
 import { foodsList } from './foodlist.js';
 
 const meals = ["Breakfast", "Lunch", "Dinner"];
-const foodItems = makeFoods();
 
 
 //Generates a food with random nutritional value
@@ -37,7 +36,7 @@ function makeMeal() {
     const itemID = Math.floor(Math.random() * foodsList.length);
     const servings = Math.floor(Math.random() * 4) + 1;
     meal.push({
-      food: foodItems[itemID],
+      foodID: itemID,
       servings
     });
   }
@@ -56,7 +55,7 @@ function makeDay() {
   return meals;
 }
 
-const dayOfMeals = makeDay();
+export const foodItems = makeFoods();
+export const dayOfMeals = makeDay();
 
-export default dayOfMeals;
 
