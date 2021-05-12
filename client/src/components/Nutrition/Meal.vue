@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div>{{ meal.mealTitle }}</div>
     <table>
       <tr>
         <th v-for="(header, index) in headers" :key="index">
@@ -46,3 +45,9 @@ export default defineComponent({
   setup() {},
 });
 </script>
+
+<style scoped>
+table {
+  margin: 0 auto;
+}
+</style>
