@@ -8,6 +8,8 @@
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
+import * as nutritionData from "./scripts/scripts";
+
 export default defineComponent({
   name: "NutritionContainer",
   props: {},
