@@ -31,24 +31,27 @@
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
+    <WorkoutContainer />
   </p>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from "vue";
+import WorkoutContainer from "./Workout/WorkoutContainer.vue";
 export default defineComponent({
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
+  components: { WorkoutContainer },
   setup: () => {
-    const count = ref(0)
-    return { count }
-  }
-})
+    const count = ref(0);
+    return { count };
+  },
+});
 </script>
 
 <style scoped>
