@@ -3,22 +3,18 @@
     <h2>
       {{ title }}
     </h2>
-    <WorkoutForm v-bind="{ title, changeTitle }" />
   </div>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
-import WorkoutForm from "./WorkoutForm.vue";
 export default defineComponent({
-  name: "WorkoutContainer",
+  name: "NutritionContainer",
   props: {},
-  components: {
-    WorkoutForm,
-  },
+  components: {},
   methods: {},
   setup: () => {
-    const title = ref("Workout App");
+    const title = ref("Nutrition App");
     const changeTitle = (e) => {
       title.value = e.target.value;
     };
