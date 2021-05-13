@@ -19,10 +19,10 @@ export default defineComponent({
     foodArray() {
       return [
         this.item.name,
-        this.item.calories,
         this.item.carbs,
         this.item.fats,
         this.item.pro,
+        this.item.calories,
       ];
     },
   },

@@ -35,10 +35,10 @@ export default defineComponent({
     headers() {
       return [
         [this.meal.mealTitle, ""],
-        ["Calories", "kcal"],
         ["Carbs", "g"],
         ["Fat", "g"],
         ["Pro", "g"],
+        ["Calories", "kcal"],
       ];
     },
     totals() {},
@@ -51,6 +51,11 @@ export default defineComponent({
 table {
   margin: 0 auto;
   width: 390px;
+  border: 1px solid black;
+}
+
+th {
+  border-bottom: 1px rgb(161, 153, 153) solid;
 }
 
 th:nth-child(1),
@@ -62,6 +67,10 @@ td:nth-child(1) {
 th:nth-child(2),
 td:nth-child(2) {
   width: 75px;
+}
+
+tr:last-child {
+  font-weight: 700;
 }
 
 tr > td {

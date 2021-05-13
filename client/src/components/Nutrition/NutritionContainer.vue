@@ -4,7 +4,6 @@
       {{ title }}
     </h2>
     <Meal v-for="(meal, index) in nutritionData" :meal="meal" :key="index" />
-    <div>totals: {{ totals }}</div>
   </div>
 </template>
 
@@ -22,6 +21,7 @@ export default defineComponent({
     nutritionData() {
       const output = [];
       const totals = { calories: 0, carbs: 0, fats: 0, pro: 0 };
+      //loop through different meals
       for (let meal of dayOfMeals) {
         const mealArray = [];
         const mealTotals = {
@@ -31,6 +31,7 @@ export default defineComponent({
           fats: 0,
           pro: 0,
         };
+        //loop through each food of each meal
         for (let food of meal.mealArray) {
           //create a food object with name and macros
           const foodObj = {
@@ -51,18 +52,21 @@ export default defineComponent({
         mealArray.push(mealTotals);
         output.push({ mealTitle: meal.mealTitle, mealArray });
       }
-      this.totals.value = totals;
+      //Add the Daily totals to data array
+      output.push({
+        mealTitle: "Daily Totals",
+        mealArray: [{ name: "", ...totals }],
+      });
       return output;
     },
   },
   setup: () => {
     const title = ref("Nutrition App");
-    const totals = ref({});
 
     const changeTitle = (e) => {
       title.value = e.target.value;
     };
-    return { title, totals, changeTitle };
+    return { title, changeTitle };
   },
 });
 </script>
