@@ -54,7 +54,7 @@ export default defineComponent({
       }
       //Add the Daily totals to data array
       output.push({
-        mealTitle: "Daily Totals",
+        mealTitle: "Daily Total",
         mealArray: [{ name: "", ...totals }],
       });
       return output;

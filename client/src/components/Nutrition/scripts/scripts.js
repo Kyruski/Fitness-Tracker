@@ -24,13 +24,12 @@ function makeFoods() {
       fats,
     });
   }
-  // fs.appendFileSync('foods.json', JSON.stringify(foods));
   return foods;
 }
 
 //Generates a meal with random foods
 function makeMeal() {
-  const numItems = 1 + Math.floor((Math.random() * 4)); //Determine how many food items
+  const numItems = 2 + Math.floor((Math.random() * 5)); //Determine how many food items
   const meal = [];
   for (let i = 0; i < numItems; i++) {
     const itemID = Math.floor(Math.random() * foodsList.length);

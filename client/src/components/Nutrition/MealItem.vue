@@ -5,18 +5,19 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import { IMeal } from "./types/types";
+import { IFood } from "./types/types";
 
 export default defineComponent({
   name: "MealItem",
   props: {
     item: {
-      type: Object as () => IMeal,
+      type: Object as () => IFood,
       required: true,
     },
   },
   computed: {
     foodArray() {
+      console.log("abc", this.item);
       return [
         this.item.name,
         this.item.carbs,
