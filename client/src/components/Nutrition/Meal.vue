@@ -77,8 +77,8 @@ table {
   border: 1px solid black;
 }
 
-th:nth-child(1),
-td:nth-child(1) {
+th,
+td {
   text-align: left;
 }
 
